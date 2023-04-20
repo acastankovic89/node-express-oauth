@@ -48,6 +48,7 @@ let state = "";
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", "assets/authorization-server");
+app.set("authorize", "/authorize");
 app.use(timeout);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
