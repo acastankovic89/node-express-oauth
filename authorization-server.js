@@ -58,12 +58,9 @@ Your code here
 
 */
 
-autorizationServer.on("request", (req, res) => {
-  app.get("/authorize", (req, res) => {
-    res.statusCode = 200;
-    res.end();
-  });
-  //return res.end(STATUS_CODES.);
+app.get("/authorize", (req, res) => {
+  res.statusCode = 200;
+  res.end();
 });
 
 const server = app.listen(config.port, "localhost", function () {
